@@ -1,111 +1,1314 @@
-<div id="homepage" :class="[heroHeightSet ? '' : 'uninitialized']" v-cloak>
-  <div class="hero d-flex flex-column justify-content-center" full-page-hero>
-    <div class="container text-center">
-      <div class="hero-image">
-        <img class="sky" alt="The sky above the ocean" src="/images/hero-sky.png"/>
-        <img class="cloud cloud-1" alt="A grayish-blue cloud" src="/images/hero-cloud.png"/>
-        <img class="cloud cloud-2" alt="Another grayish-blue cloud" src="/images/hero-cloud.png"/>
-        <img class="ship" alt="A ship hovering a few feet over the surface of the water, bearing a flagpole with the Sails.js logo" src="/images/hero-ship.png"/>
-        <img class="water" alt="The shadow of the floating ship on the water" src="/images/hero-water.png"/>
-      </div>
-      <h1 class="display-4">A new <strong>Sails</strong> app.</h1>
-      <div>
-        <div class="more-info-text" @click="clickHeroButton()">
-          <div class="text">Dive in</div>
-          <div class="icon">&darr;</div>
-        </div>
-      </div>
+<!--<?php
+$address = '119071 г. Москва ул. Ленинский пр-т, д. 19 стр. 1';
+?>-->
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+<head>
+    <title>Бухгалтерский учет.</title>
+    <meta name="description" content="Ведение бухгалтерского учёта, аудит, сдача отчётностей. Консультации для инсостранных компаний, сопровождение - Позитив+">
+    <meta name="keywords" content="учёт иностранных организаций, ведение бухгалтерии, налоговая отчетность, бухгалтерская отчетность, аудиторская компания, бухгалтерские услуги, восстановление бухгалтерского учета">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="all"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+<!--    <link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
+    <link rel="stylesheet" type="text/css"
+          href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7COpen+Sans:300,300italic,400,400italic,700italic,800%7CUbuntu:500">
+<!--    <link rel="stylesheet" href="css/bootstrap.css">-->
+<!--    <link rel="stylesheet" href="css/style.css">-->
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;">
+        <a href="httpqwertywindows.microsoft.com/en-US/internet-explorer/"><img
+                src="https://d3a1wbnh2r1l7y.cloudfront.net/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+                alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
     </div>
-  </div>
-  <div class="about-wrapper" role="scroll-destination">
-    <div class="container">
-      <div class="about text-center">
-        <h3>This is your freshly-generated project + a few extras.</h3>
-        <p>In our time <a target="_blank" href="https://sailsjs.com/about">building apps for customers</a>, we've found ourselves re-rolling some of the same key features over and over again between projects.  So we picked some of the things that kept popping up, implemented our own opinionated solutions for them, and then included it all in this free and open-source starter app.  We hope it helps you as much as it helps us!</p>
-      </div>
-      <div class="features text-center">
-        <div class="row">
-          <div class="feature mb-4 mb-sm-0 col-sm">
-            <div class="icon">
-              <i class="fa fa-envelope"></i>
-            </div>
-            <h4>Emails</h4>
-            <p class="text-muted">Built-in support for internal emails from the <a href="/contact">contact form</a>, as well as transactional emails for users.</p>
-          </div>
-          <div class="feature pt-4 pt-sm-0 mb-4 mb-sm-0 col-sm">
-            <div class="icon">
-              <i class="fa fa-lock"></i>
-            </div>
-            <h4>Authentication</h4>
-            <p class="text-muted">Ready-to-go, customizable <a href="/signup">sign up</a>, <a href="/login">login</a>, and <a href="/password/forgot">password recovery</a> flows for your users.</p>
-          </div>
-          <div class="feature pt-4 pt-sm-0 col-sm">
-            <div class="icon">
-              <i class="fa fa-credit-card"></i>
-            </div>
-            <h4>Billing</h4>
-            <p class="text-muted">Hook up to your Stripe account for managing customers and payment sources.</p>
-          </div>
-        </div>
-        <a class="btn btn-outline-info mt-5" href="/faq">Learn more</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="setup">
-      <h3 class="text-center">How to get started:</h3>
-      <div class="step">
-        <div class="step-image">
-        <img alt="computer with email symbol on screen" src="/images/setup-email.png"/>
-        </div>
-        <h5>Set up your branding and content</h5>
-        <p>This starter app includes several different page templates (including the one you're reading right now) that you can change as much or as little as you like.  If there are any pages you won't need, just remove them.</p>
-        <p>To get started, do a global find/replace in this project for occurrences of <code>NEW_APP_NAME</code> and replace them all with the actual name of your app or platform ("Facebag").  Then do the same thing again to replace <code>NEW_APP_COMPANY_NAME</code> with the actual name of your organization ("Facebag Corporation").</p>
-        <blockquote><small>This app also includes a default <a href="/legal/terms">Terms of Use</a> and <a href="/legal/privacy">Privacy Policy</a>.  We want to make it easier for apps to be transparent about their users' rights and privacy.  But we are developers, not lawyers; and this is <em>definitely not legal advice</em>.  Before going live, be sure to replace these example documents with your own company's policies, and <a href="https://en.wikipedia.org/wiki/Counsel" target="_blank">seek counsel</a> for assistance if you need to design new terms from scratch.</small></blockquote>
-      </div>
-      <div class="step">
-        <div class="step-image">
-        <img alt="computer with credit card icon on screen" src="/images/setup-payment.png"/>
-        </div>
-        <h5>Configure integrations</h5>
-        <p>In order for this app to send automated emails, you'll need to create a <a target="_blank" href="https://mailgun.com">Mailgun</a> account.  Then, in <code>config/custom.js</code>, configure the following:</p>
-        <div class="card bg-light mb-4">
-          <div class="card-body"><pre><code><span class="text-muted">// Recipient of contact form messages</span>
-internalEmailAddress: my.email@example.com,
 
-<span class="text-muted">// For outgoing emails</span>
-fromEmailAddress: 'noreply@example.com',
-fromName: 'The NEW_APP_NAME Team',
 
-<span class="text-muted">// Mailgun settings</span>
-mailgunDomain: 'transactional-mail.example.com',
-mailgunSecret: 'key-testkeyb183848139913858e8abd9a3'</code></pre>
-          </div>
+    <![endif]-->
+</head>
+<body>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+      try {
+        w.yaCounter22546432 = new Ya.Metrika({
+          id:22546432,
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+        });
+      } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+  })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/22546432" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<div class="page">
+    <div class="page-loader page-loader-variant-1">
+        <div><a class="brand brand-md brand-inverse" href="/">
+                <img src="https://d3a1wbnh2r1l7y.cloudfront.net/corporation_logo_white.svg" alt="" width="240"/></a>
+            <div class="page-loader-body">
+                <div id="spinningSquaresG">
+                    <div class="spinningSquaresG" id="spinningSquaresG_1"></div>
+                    <div class="spinningSquaresG" id="spinningSquaresG_2"></div>
+                    <div class="spinningSquaresG" id="spinningSquaresG_3"></div>
+                    <div class="spinningSquaresG" id="spinningSquaresG_4"></div>
+                    <div class="spinningSquaresG" id="spinningSquaresG_5"></div>
+                    <div class="spinningSquaresG" id="spinningSquaresG_6"></div>
+                    <div class="spinningSquaresG" id="spinningSquaresG_7"></div>
+                    <div class="spinningSquaresG" id="spinningSquaresG_8"></div>
+                </div>
+            </div>
         </div>
-        <p>To enable support for billing features, you'll need to make a <a target="_blank" href="https://stripe.com">Stripe</a> account, then include your test credentials like so:</p>
-        <div class="card bg-light mb-4">
-          <div class="card-body"><pre><code><span class="text-muted">// Stripe credentials</span>
-stripePublishableKey: 'pk_test_Zzd814nldl91104qor5911gjald',
-stripeSecret: 'sk_test_Zzd814nldl91104qor5911gjald'</code></pre>
-          </div>
-        </div>
-        <blockquote><small>If your app doesn't need payment processing, it will still work without Stripe configuration. In this case, all references to billing will just be omitted from the UI.</small></blockquote>
-      </div>
-      <div class="step">
-        <div class="step-image">
-        <img alt="computer with sails logo on screen" src="/images/setup-customize.png"/>
-        </div>
-        <h5>Customize</h5>
-        <p>Once the initial configuration is done, you're ready to start building out the rest of your app.</p>
-        <p>We worked hard to make this starter app's structure consistent and its files are as bare-bones as possible, so it's easy to add new pages and business logic following the conventions we set up. If you run into trouble, have a look at <a href="/faq">your new FAQ page</a>, which covers the tools we used and how to customize.  For a deeper dive, check out the Sails <a href="https://courses.platzi.com/courses/sails-js/">walkthrough</a>, <a href="https://sailsjs.com/documentation">reference documentation</a> and <a href="https://sailsjs.com/support">support</a> pages.</p>
-      </div>
     </div>
-    <hr/>
-    <div class="pep-talk text-center">
-      <h3>Let's get to work.</h3>
-      <p>We think this project is a pretty convenient starting point, but of course there's no one-size-fits-all solution. The good news is, this app is in your hands now, so you can jump into the files and adapt it to your needs. Change some code around. Break stuff.  Fix it. And above all: <strong>make something people want to use</strong>.</p>
-      <p><span class="text-muted">&hearts;</span> <a href="https://sailsjs.com/about">The Sails Team</a></p>
-    </div>
-  </div>
+    <% /* <header class="page-head" id="home">
+        <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-corporate-light" data-layout="rd-navbar-fixed"
+                 data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
+                 data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+                 data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+                 data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+                 data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="53px" data-xl-stick-up-offset="53px"
+                 data-xxl-stick-up-offset="53px" data-lg-stick-up="true" data-xl-stick-up="true"
+                 data-xxl-stick-up="true">
+                <div class="bg-ebony-clay context-dark">
+                    <div class="rd-navbar-inner">
+                        <div class="rd-navbar-aside-wrap">
+                            <div class="rd-navbar-aside">
+                                <div class="rd-navbar-aside-toggle" data-rd-navbar-toggle=".rd-navbar-aside">
+                                    <span></span></div>
+                                <div class="rd-navbar-aside-content">
+                                    <ul class="rd-navbar-aside-group list-units">
+                                        <li>
+                                            <div class="unit flex-row unit-spacing-xs align-items-center">
+                                                <div class="unit-left"><span
+                                                            class="icon icon-xxs icon-primary fa-map-marker"></span></div>
+                                                <div class="unit-body"><a class="link-secondary"  title="Посмотреть на карте" target="_blank" href="https://goo.gl/maps/gmHHBtpJ6gL2"><?=$address?></a></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="unit flex-row unit-spacing-xs align-items-center">
+                                                <div class="unit-left"><span
+                                                            class="icon icon-xxs icon-primary fa-clock-o"></span></div>
+                                                <div class="unit-body"><span class="time">Часы работы: Пон – Пятн, с 10:00 до 18:00.</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="unit flex-row unit-spacing-xs align-items-center">
+                                                <div class="unit-left"><span
+                                                            class="icon icon-xxs icon-primary fa-phone"></span></div>
+                                                <div class="unit-body"><a class="link-secondary" href="wtai://wp/mc;84956983252">+7
+                                                        (495) 698-3252</a></div>
+                                            </div>
+
+
+
+
+                                        </li>
+                                    </ul>
+                                    <div class="rd-navbar-aside-group">
+                                        <ul class="list-inline list-inline-reset">
+                                            <li>
+                                                <a target="_blank" class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-facebook"
+                                                   href="https://www.facebook.com/pozitivpluscom/"></a></li>
+                                            <!--<li>-->
+                                            <!--<a class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-twitter"-->
+                                            <!--href="#"></a></li>-->
+                                            <!--<li>-->
+                                            <!--<a class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-google-plus"-->
+                                            <!--href="#"></a></li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rd-navbar-inner">
+                    <div class="rd-navbar-group">
+                        <div class="rd-navbar-panel">
+                            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span>
+                            </button>
+                            <a class="rd-navbar-brand brand" href="/">
+                                <img src="https://d3a1wbnh2r1l7y.cloudfront.net/corporation_logo.svg" title="Позитив+" alt="Позитив+. Бухгалтерский учёт."  width="175" /></a>
+                        </div>
+                        <div class="rd-navbar-group-asside">
+                            <div class="rd-navbar-nav-wrap">
+                                <div class="rd-navbar-nav-inner">
+                                    <ul class="rd-navbar-nav">
+                                        <li class="active">
+                                            <a href="#home">
+                                                <span class="icon icon-xxs  fa-home"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#services">Услуги</a>
+                                        </li>
+                                        <!--<li><a href="#team">Наша команда</a></li>-->
+                                        <li>
+                                            <a href="#pricing">Прайс</a>
+                                        </li>
+                                        <li>
+                                            <a href="#about">О нас</a>
+                                        </li>
+                                        <li><a href="#testimonials">Отзывы</a>
+                                        </li>
+                                        <li><a href="#contacts">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>*/ %>
+
+
+    <section>
+        <div class="swiper-container swiper-slider swiper-variant-1 bg-black" data-loop="false" data-autoplay="false"
+             data-simulate-touch="true">
+            <div class="swiper-wrapper text-center">
+                <div class="swiper-slide" data-slide-bg="https://d3a1wbnh2r1l7y.cloudfront.net/Banner_Root_background.jpg">
+                    <div class="swiper-slide-caption">
+                        <div class="container">
+                            <div class="row justify-content-md-end">
+                                <div class="col-xl-1 d-none d-xl-inline-block d-xxl-none"></div>
+                                <div class="col-md-9 col-lg-7 col-xl-6 text-md-left">
+                                    <h1 class="slider-header text-ebony-clay" data-caption-animate="fadeInUp"
+                                        data-caption-delay="0s">Компания "Позитив+"
+                                    </h1>
+                                    <!--                                    <strong class="text-right" style="color: #25313D;"><span id="anniversary2"></span> на рынке.</strong>-->
+                                    <p class="text-bigger text-regular slider-text text-ebony-clay"
+                                       data-caption-animate="fadeInUp" data-caption-delay="100">Бухгалтерский учёт. Аудит. Учет в иностранных компаниях.
+
+
+                                    </p>
+                                    <a
+                                            class="button button-icon button-icon-right button-primary big"
+                                            data-caption-animate="fadeInUp" data-caption-delay="250" href="#contacts"><span
+                                                class="icon icon-xs fa-angle-right"></span>Первая консультация бесплатная</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-slide-bg="https://d3a1wbnh2r1l7y.cloudfront.net/home-slider-1-slide-2.jpg">
+                    <div class="swiper-slide-caption">
+                        <div class="container">
+                            <div class="row justify-content-md-end">
+                                <div class="col-xl-1 d-none d-xl-inline-block d-xxl-none"></div>
+                                <div class="col-md-9 col-lg-7 col-xl-6 text-md-left">
+                                    <h1 class="slider-header text-ebony-clay" data-caption-animate="fadeInUp"
+                                        data-caption-delay="0s">Восстановление бухгалтерского и налогового учёта</h1>
+                                    <p class="text-bigger text-regular slider-text text-ebony-clay"
+                                       data-caption-animate="fadeInUp" data-caption-delay="100">Бухгалтерские услуги для НКО, ИП, АО, ООО. Представление
+                                        отчетности в налоговые органы,
+                                        бухгалтерский учет иностранных компаний.</p><a
+                                            class="button button-icon button-icon-right button-primary big"
+                                            data-caption-animate="fadeInUp" data-caption-delay="250" href="#contacts"><span
+                                                class="icon icon-xs fa-angle-right"></span>Первая консультация бесплатная</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-slide-bg="https://d3a1wbnh2r1l7y.cloudfront.net/home-slider-1-slide-3.jpg">
+                    <div class="swiper-slide-caption">
+                        <div class="container">
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-11 col-lg-10 col-xl-9">
+                                    <div class="shilder-header-with-divider d-none d-lg-block"
+                                         data-caption-animate="fadeInUp" data-caption-delay="0s">20 лет средний стаж в
+                                        бухгалтерии работников компании
+                                    </div>
+                                    <h2 class="slider-header" data-caption-animate="fadeInUp" data-caption-delay="100s">
+                                        Стоимость полноценного восстановления <br>бухгалтерского учета,<br> от 4500 руб.
+                                    </h2><a
+                                            class="button button-icon button-icon-right button-primary big"
+                                            data-caption-animate="fadeInUp" data-caption-delay="250" href="#contacts"><span
+                                                class="icon icon-xs fa-angle-right"></span>
+                                        Задать вопрос</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-scrollbar d-xl-none"></div>
+            <div class="swiper-nav-wrap">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <section class="section-50 section-md-90" id="services">
+        <div class="container text-center">
+            <h2>Услуги</h2>
+            <div class="row row-40 row-offset-3">
+                <div class="col-md-6 col-lg-4 height-fill">
+                    <article class="icon-box">
+                        <div class="box-top">
+                            <div class="box-icon"><span
+                                        class="icon icon-primary icon-lg-bigger material-icons-remove_red_eye material-icons-device_hub"></span>
+                            </div>
+                            <div class="box-header">
+                                <h4><a href="#">Комплексное бухгалтерское обслуживание</a></h4>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="box-body">
+                            <p class="text-gray-05">Разработка учетной политики для целей бухгалтерского и налогового
+                                учета; разработка единого рабочего плана счетов; разработка документооборота компании;
+                                моделирование системы бухгалтерского учета (постановка задач) при внедрении
+                                информационных систем; оптимизация организационной структуры финансово-бухгалтерского
+                                блока и его взаимодействие с другими подразделениями; разработка регламентов подготовки
+                                внешней и внутренней отчетности..</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4 height-fill">
+                    <article class="icon-box">
+                        <div class="box-top">
+                            <div class="box-icon"><span
+                                        class="icon icon-primary icon-lg-bigger mercury-ico mercury-icon-partners"></span>
+                            </div>
+                            <div class="box-header">
+                                <h4><a href="#">Восстановление бухгалтерского учёта</a></h4>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="box-body">
+                            <p class="text-gray-05">Разработка учетной политики для целей бухгалтерского и налогового
+                                учета; проведение экспертизы учетной политики предприятия для целей бухгалтерского и
+                                налогового учета; создание, восстановление, обработка и систематизация первичных
+                                документов; формирование и/или корректировка проводок; проверка и/или составление
+                                регистров бухгалтерского и налогового учета; составление бухгалтерской (финансовой)
+                                отчетности; составление отчетов во внебюджетные фонды; составление налоговых
+                                деклараций. </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4 height-fill">
+                    <article class="icon-box">
+                        <div class="box-top">
+                            <div class="box-icon"><span
+                                        class="icon icon-primary icon-lg-bigger material-icons-supervisor_account"></span>
+                            </div>
+                            <div class="box-header">
+                                <h4><a href="#">Проведение экспертиз, консультационная поддержка.</a></h4>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="box-body">
+                            <p class="text-gray-05">Экспертиза бизнес-проектов, крупных сделок, оценка планируемых
+                                управленческих решений с точки зрения возникновения рисков, связанных с ведением
+                                бухгалтерского учета и налоговых последствий (на основании договоров, бизнес-планов и
+                                пр.); экспертиза бухгалтерского и налогового учета, результатов хозяйственной
+                                деятельности, с целью принятия решений об эффективности осуществления деятельности;</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+            class="bg-decoration-wrap bg-decoration-bottom section-bottom-60 section-xl-top-100 section-xl-bottom-100 bg-athens-gray"
+            id="pricing">
+        <div class="container bg-decoration-content">
+            <div class="row justify-content-md-center">
+                <h2>Прайс</h2>
+                <div class="col-lg-10 col-xl-12">
+                    <div class="row row-40 align-items-md-end">
+                        <div class="col-md-6 col-xl-3">
+                            <div class="pricing-table">
+                                <div class="pricing-table-body">
+                                    <h5 class="pricing-table-header">бесплатно</h5>
+                                    <div class="pricing-object pricing-object-lg">
+                                        <span class="small small-top">
+                                           руб.
+                                        </span>
+                                        <span class="price">0</span>
+                                        <span class="small small-bottom">/мес.</span>
+
+                                        <!--<span class="small small-top">$</span>-->
+                                        <!--<span class="price">199</span>-->
+                                        <!--<span class="small small-bottom">/mo</span>-->
+                                    </div>
+                                    <div class="divider-circle"></div>
+                                    <ul class="pricing-list">
+                                        <li><span class="text-ubold text-ebony-clay"> 1 </span>консультация</li>
+                                        <!--по вопросам бухгалтерского учета и налогообложения-->
+                                        <!--<li><span class="text-ubold text-ebony-clay"></span></li>-->
+                                        <!--<li><span class="text-ubold text-ebony-clay"></span></li>-->
+                                        <li>устная в офисе</li>
+                                        <li>бухгалтерский учет и</li>
+                                        <li>налогообложение</li>
+
+                                        <!--<li><span class="text-ubold text-ebony-clay"></span></li>-->
+                                    </ul>
+                                </div>
+                                <div class="pricing-table-footer"><a class="button button-primary button-block"
+                                                                     href="#contacts">Подробнее</a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="pricing-table">
+                                <div class="pricing-table-body">
+                                    <h5 class="pricing-table-header">Нулевая отчетн.</h5>
+                                    <div class="pricing-object pricing-object-lg"><span
+                                                class="small small-top">от</span><span
+                                                class="price">3.5</span><span class="small small-bottom">т.р/кврт</span>
+                                    </div>
+                                    <div class="divider-circle"></div>
+                                    <ul class="pricing-list">
+                                        <li><span class="text-ubold text-ebony-clay">1</span> отчётность</li>
+                                        <li>составление и сдача</li>
+                                        <li>для ИП и ООО</li>
+                                        <li><span class="text-ubold text-ebony-clay"></span></li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-table-footer"><a class="button button-primary button-block"
+                                                                     href="#contacts">Подробнее</a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="pricing-table pricing-table-preferred">
+                                <!--<div class="pricing-table-label">-->
+                                <!--&lt;!&ndash;<p>прайс</p>&ndash;&gt;-->
+                                <!--</div>-->
+                                <div class="pricing-table-body">
+                                    <h5 class="pricing-table-header">УСН</h5>
+                                    <div class="pricing-object pricing-object-lg"><span
+                                                class="small small-top">от</span><span
+                                                class="price">5.5</span><span class="small small-bottom"> т.р/мес.</span>
+                                    </div>
+                                    <div class="divider-circle"></div>
+                                    <ul class="pricing-list">
+                                        <li><span class="text-ubold text-ebony-clay">1-5</span>сотрудников</li>
+                                        <li><span class="text-ubold text-ebony-clay">до 20 </span>операций</li>
+                                        <li><span class="text-ubold text-ebony-clay"></span></li>
+                                        <li></li>
+                                        <li><span class="text-ubold text-ebony-clay"></span></li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-table-footer"><a class="button button-primary button-block"
+                                                                     href="#contacts">Подробнее</a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="pricing-table">
+                                <div class="pricing-table-body">
+                                    <h5 class="pricing-table-header">ОСНО </h5>
+                                    <div class="pricing-object pricing-object-lg">
+                                        <span class="small small-top">от</span>
+                                        <span class="price">7</span>
+                                        <span class="small small-bottom">т.р/мес.</span>
+                                    </div>
+                                    <div class="divider-circle"></div>
+                                    <ul class="pricing-list">
+                                        <li><span class="text-ubold text-ebony-clay">1-5</span> сотрудников</li>
+                                        <li><span class="text-ubold text-ebony-clay">до 20</span> операций</li>
+                                        <li><span class="text-ubold text-ebony-clay"></span></li>
+                                        <li></li>
+                                        <li><span class="text-ubold text-ebony-clay"></span></li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-table-footer"><a class="button button-primary button-block"
+                                                                     href="#contacts">Подробнее</a></div>
+                            </div>
+                        </div>
+                        <!--<div class="col-md-6 col-xl-3">-->
+                        <!--<div class="pricing-table">-->
+                        <!--<div class="pricing-table-body">-->
+                        <!--<h5 class="pricing-table-header">Ultimate</h5>-->
+                        <!--<div class="pricing-object pricing-object-lg">-->
+                        <!--<span class="small small-top">$</span>-->
+                        <!--<span class="price">199</span>-->
+                        <!--<span class="small small-bottom">/mo</span>-->
+                        <!--</div>-->
+                        <!--<div class="divider-circle"></div>-->
+                        <!--<ul class="pricing-list">-->
+                        <!--<li><span class="text-ubold text-ebony-clay">100GB</span>Space amount</li>-->
+                        <!--<li><span class="text-ubold text-ebony-clay">Unlimited</span>users</li>-->
+                        <!--<li><span class="text-ubold text-ebony-clay">60GB</span>Bandwidth</li>-->
+                        <!--<li>Free Support</li>-->
+                        <!--<li><span class="text-ubold text-ebony-clay">Unlimited</span>Databases</li>-->
+                        <!--</ul>-->
+                        <!--</div>-->
+                        <!--<div class="pricing-table-footer"><a class="button button-primary button-block" href="#">Sign up</a></div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-decoration-object bg-whisperapprox"></div>
+    </section>
+
+    <section class="section parallax-container bg-black" data-parallax-img="https://d3a1wbnh2r1l7y.cloudfront.net/parallax-3.jpg">
+        <div class="parallax-content">
+            <div class="section-40 section-md-75">
+                <div class="container">
+                    <div class="row align-items-center row-30">
+                        <div class="col-lg-6">
+                            <h3>Бесплатная консультация
+                                <small>Ведение бухгалтерии. Регистрация предприятий. Сдача отчётности.</small>
+                            </h3>
+                        </div>
+                        <div class="col-lg-6">
+                            <form class="rd-mailform form-modern" data-form-output="form-output-global"
+                                  data-form-type="phone" method="post" action="bat/mail.php">
+                                <div class="row row-15">
+                                    <div class="col-sm-6">
+                                        <div class="form-wrap">
+                                            <input class="form-input" id="contact-phone" type="text" name="phone"
+                                                   data-constraints="@Numeric @Required">
+                                            <label class="form-label" for="contact-phone">Ваш телефон</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button class="button button-primary button-block" type="submit">Консультация
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--<div class="row align-items-center row-30">-->
+                    <!--<div class="col-lg-6">-->
+                    <!--<h2>Оставьте свой email <br>-->
+                    <!--<small>вы один из первых узнаете о скидках на бухгалтерское обслуживание</small>-->
+                    <!--</h2>-->
+                    <!--</div>-->
+                    <!--<div class="col-lg-6">-->
+                    <!--<form class="rd-mailform form-modern" data-form-output="form-output-global"-->
+                    <!--data-form-type="subscribe" method="post" action="bat/mail.php">-->
+                    <!--<div class="row row-15">-->
+                    <!--<div class="col-sm-6">-->
+                    <!--<div class="form-wrap">-->
+                    <!--<input class="form-input" id="contact-email1" type="email" name="email"-->
+                    <!--data-constraints="@Email @Required">-->
+                    <!--<label class="form-label" for="contact-email1">Email</label>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-6">-->
+                    <!--<button class="button button-primary button-block" type="submit">Хочу скидку-->
+                    <!--</button>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</form>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section-66 section-md-90 section-xl-bottom-120 bg-white" id="about">
+        <div class="container">
+            <h3>О нас</h3>
+            <div class="row row-40 justify-content-xl-between align-items-center">
+                <div class="col-md-6 col-xl-5 text-secondary">
+                    <div class="inset-md-right-15 inset-xl-right-0">
+                        <p>ООО «Позитив+» занимает лидирующие позиции в своей отрасли и зарекомендовала себя как
+                            надежный партнер, при этом компания продолжает успешное развитие во всех сегментах и видит
+                            широкие возможности для дальнейшей экспансии на другие рынки.
+                        </p>
+                        <p>
+
+                            <strong>Мы на рынке <span id="anniversary"></span>.</strong>
+                            <br>
+                            Компания, которая состоялась - динамичная, современная и востребованная рынком организация,
+                            с большой постоянной клиентской базой, известным именем и репутацией надежного, эффективного
+                            и опытного партнера в сфере решения профессиональных задач.
+
+                        </p>
+                        <p><strong>Генеральный Директор:</strong>  <br>Петрова Ольга Николаевна</p>
+                        <p><strong>Юридический адрес:</strong>  <br>143432, Московская обл, рабочий поселок Нахабино, район Красногорский,
+                            улица Парковая, д. 21, 13</p>
+                        <p><strong>Фактический адрес:</strong> <br><?=$address?></p>
+
+                        <p> ИНН 5024085700, ОГРН 1075024000754, КПП 502401001</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-progress">
+                        <li>
+                            <p class="animated fadeIn">Консалтинг</p>
+                            <div class="progress-bar-js progress-bar-horizontal progress-bar-red-orange-1"
+                                 data-value="70" data-stroke="4" data-easing="linear" data-counter="true"
+                                 data-duration="1000" data-trail="100"></div>
+                        </li>
+                        <li>
+                            <p class="animated fadeIn">Аудит</p>
+                            <div class="progress-bar-js progress-bar-horizontal progress-bar-dodger-blue"
+                                 data-value="54" data-stroke="4" data-easing="linear" data-counter="true"
+                                 data-duration="1000" data-trail="100"></div>
+                        </li>
+                        <li>
+                            <p class="animated fadeIn">Восстановление бухгалтерского учета</p>
+                            <div class="progress-bar-js progress-bar-horizontal progress-bar-gorse" data-value="87"
+                                 data-stroke="4" data-easing="linear" data-counter="true" data-duration="1000"
+                                 data-trail="100"></div>
+                        </li>
+                        <li>
+                            <p class="animated fadeIn">Бухгалтерский и налоговый учет</p>
+                            <div class="progress-bar-js progress-bar-horizontal progress-bar-danger-01" data-value="90"
+                                 data-stroke="4" data-easing="linear" data-counter="true" data-duration="1000"
+                                 data-trail="100"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-whisperapprox">
+        <div class="container">
+            <div class="row justify-content-sm-center justify-content-md-start">
+                <div class="col-sm-10 col-md-6 text-left section-60 section-md-90">
+                    <div>
+                        <h3>Регламент компании</h3>
+                        <div class="box-photo-frame"><img src="https://d3a1wbnh2r1l7y.cloudfront.net/about-1-510x268.jpg" alt="" width="510"
+                                                          height="268"/>
+                        </div>
+                        <h6>Наши Ценности</h6>
+                        <p>Нашими клиентами являются сами предприниматели, бизнесмены и организации, а не их
+                            бухгалтерия. Мы не просто собираем деньги с тех, кто не в состоянии вести собственную
+                            бухгалтерию, мы строим современную технологичную компанию, обеспечивающую малый бизнес
+                            эффективной легализацией.</p>
+                        <p>Мы работаем на своих клиентов, позволяя им делать бизнес и не тратить время, энергию и лишние
+                            деньги на легализацию. Мы достигаем эффективной легализации путем построения четкой
+                            отлаженной работы, организуя бесперебойный процесс на следующих принципах:
+                            <br>
+                            Мы запрашиваем минимум документов и работаем в постоянном плотном контакте, поэтому у
+                            клиентов не возникает эффекта психологической удаленности его бухгалтерии и ощущения
+                            отсутствия рычагов управления экономикой предприятия.
+                            Мы знаем, что всякий лишний потраченный нами рубль – это рубль, который мы отнимаем у
+                            своих клиентов.
+                        </p>
+                        <p>
+                            Мы являемся для своих клиентов не просто поставщиками необходимых услуг, но и источником
+                            жизненно необходимых знаний и навыков. Наш корпоративный дизайн направлен на выражение
+                            позитива, надежности и несомненности нашей Миссии.
+                        </p>
+                        <p>
+                            Каждый сотрудник Компании при работе с клиентами доносит до них ценности и Миссию Компании.
+                            Мы создаем рынок и меняем его, осуществляя свою Миссию и насаждая свои ценности. Основа
+                            нашего подхода к клиентам – долгосрочные отношения. Внутренняя культура компании, руководство
+                            Компании ориентированно на выполнение Миссии. Сотрудники Компании разделяют её ценности и
+                            являются их носителями. У нас нет персонала, у нас есть люди, работающие друг с другом,
+                            участвующие в выполнении Миссии.
+                        </p>
+                        <p>Мы предоставляем работу только адептам корпоративных ценностей Компании. Наши сотрудники
+                            всегда знают, где Компания находится сейчас, куда она идет, и как ее ценности и Миссия
+                            проявляются в их повседневной работе. </p>
+                    </div>
+                </div>
+                <div class="col-md-6 context-dark section-image-aside section-image-aside-right pos-relative-before-sm section-60 section-md-0 d-md-flex">
+                    <div class="section-image-aside-img" style="background-image: url(https://d3a1wbnh2r1l7y.cloudfront.net/bg-image-12.jpg);">
+                        <div class="section-bordered-inside"></div>
+                    </div>
+                    <div class="row align-items-md-center offset-top-0">
+                        <div class="col-md-11 col-lg-10 to-front offset-md-1 offset-lg-2">
+                            <h3>Миссия</h3>
+                            <h5>ООО Позитив+</h5>
+                            <p class="text-white-05">- команда доброжелательных, оптимистичных, коммуникабельных
+                                профессионалов, готовых прийти на помощь, решить проблемы и поддержать в трудную минуту
+                                людей, которые доверили нам важную и сложную сферу своей деятельности – бухгалтерский
+                                учет.</p>
+
+
+                            <h3>Преимущества</h3>
+                            <h5>Почему выбрали нас</h5>
+                            <p class="text-white-05">Возможность привлечения для ведения бухгалтерского и налогового
+                                учета высококвалифицированных специалистов
+
+                                Исключение ошибок, причиной которых могут стать некомпетентность и низкая квалификация
+                                сотрудников, старое программное обеспечение или несвоевременно учтенные изменения в
+                                Российском законодательстве.</p>
+                            <ul class="list-marked">
+                                <li class="text-white">Оперативность</li>
+                                <li class="text-white">Сокращение затрат</li>
+                                <li class="text-white">Гарантии</li>
+                                <li class="text-white">Экономия</li>
+                                <li class="text-white">Конфиденциальность</li>
+                                <li class="text-white">Опыт общения с государственными структурами</li>
+                                <li class="text-white">Привлечение высококвалифицированных специалистов</li>
+                            </ul>
+                            <a class="button button-icon button-icon-right button-primary big" href="#contacts">
+                                <span class="icon icon-xs fa-angle-right"></span>Записаться на прием
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section-60 section-md-100 bg-whisperapprox">
+        <div class="container text-center text-lg-left">
+            <div class="row row-30 align-items-md-center justify-content-md-center">
+                <div class="col-lg-8 col-xl-7">
+                    <h3 class="medium">Предлагаем разумные цены</h3>
+                </div>
+                <div class="col-lg-4 col-xl-3"><a class="button button-xl button-ebony-clay-outline" href="#contacts"
+                                                  style="min-width: 270px;">Узнать больше</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!--<section class="section-50 section-md-100" id="team">-->
+    <!--<div class="container">-->
+    <!--<h2 class="text-center">Познакомьтесь с нашей командой</h2>-->
+    <!--<div class="row row-40">-->
+    <!--<div class="col-sm-6 col-md-4 col-lg-3">-->
+    <!--<div class="thumbnail-variant-2-wrap">-->
+    <!--<div class="thumbnail thumbnail-variant-2">-->
+    <!--<figure class="thumbnail-image"><img src="images/team-9-246x300.jpg" alt="" width="246"-->
+    <!--height="300"/>-->
+    <!--</figure>-->
+    <!--<div class="thumbnail-inner">-->
+    <!--<div class="link-group"><span-->
+    <!--class="icon icon-xxs icon-primary material-icons-local_phone"></span><a-->
+    <!--class="link-white"  href="wtai://wp/mc;84956983252">+7 (495) 698-3252</a></div>-->
+    <!--<div class="link-group"><span class="icon icon-xxs icon-primary fa-envelope-o"></span><a-->
+    <!--class="link-white" href="mailto:kaismer@pozitivplus.com">kaismer@pozitivplus.com</a></div>-->
+    <!--</div>-->
+    <!--<div class="thumbnail-caption">-->
+    <!--<p class="text-header"><a href="#">Светлана Кайсмер</a></p>-->
+    <!--<div class="divider divider-md"></div>-->
+    <!--<p class="text-caption">Бизнес экспертиза</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-sm-6 col-md-4 col-lg-3">-->
+    <!--<div class="thumbnail-variant-2-wrap">-->
+    <!--<div class="thumbnail thumbnail-variant-2">-->
+    <!--<figure class="thumbnail-image"><img src="images/team-10-246x300.jpg" alt="" width="246"-->
+    <!--height="300"/>-->
+    <!--</figure>-->
+    <!--<div class="thumbnail-inner">-->
+    <!--<div class="link-group"><span-->
+    <!--class="icon icon-xxs icon-primary material-icons-local_phone"></span><a-->
+    <!--class="link-white"  href="wtai://wp/mc;84956983252">+7 (495) 698-3252</a></div>-->
+    <!--<div class="link-group"><span class="icon icon-xxs icon-primary fa-envelope-o"></span><a-->
+    <!--class="link-white" href="mailto:smolen@pozitivplus.com">smolen@pozitivplus.com</a></div>-->
+    <!--</div>-->
+    <!--<div class="thumbnail-caption">-->
+    <!--<p class="text-header"><a href="#">Григорий Смолен</a></p>-->
+    <!--<div class="divider divider-md"></div>-->
+    <!--<p class="text-caption">Инвестиционные проекты</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-sm-6 col-md-4 col-lg-3">-->
+    <!--<div class="thumbnail-variant-2-wrap">-->
+    <!--<div class="thumbnail thumbnail-variant-2">-->
+    <!--<figure class="thumbnail-image"><img src="images/team-11-246x300.jpg" alt="" width="246"-->
+    <!--height="300"/>-->
+    <!--</figure>-->
+    <!--<div class="thumbnail-inner">-->
+    <!--<div class="link-group"><span-->
+    <!--class="icon icon-xxs icon-primary material-icons-local_phone"></span><a-->
+    <!--class="link-white" href="wtai://wp/mc;84956983252">+7 (495) 698-3252</a></div>-->
+    <!--<div class="link-group"><span class="icon icon-xxs icon-primary fa-envelope-o"></span><a-->
+    <!--class="link-white" href="mailto:safronova@pozitivplus.com">safronova@pozitivplus.com</a></div>-->
+    <!--</div>-->
+    <!--<div class="thumbnail-caption">-->
+    <!--<p class="text-header"><a href="#">Мария Сафронова</a></p>-->
+    <!--<div class="divider divider-md"></div>-->
+    <!--<p class="text-caption">Главный бухгалтер</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-sm-6 col-md-4 col-lg-3">-->
+    <!--<div class="thumbnail-variant-2-wrap">-->
+    <!--<div class="thumbnail thumbnail-variant-2">-->
+    <!--<figure class="thumbnail-image"><img src="images/team-12-246x300.jpg" alt="" width="246"-->
+    <!--height="300"/>-->
+    <!--</figure>-->
+    <!--<div class="thumbnail-inner">-->
+    <!--<div class="link-group"><span-->
+    <!--class="icon icon-xxs icon-primary material-icons-local_phone"></span><a-->
+    <!--class="link-white"  href="wtai://wp/mc;84956983252"">+7 (495) 698-3252</a></div>-->
+    <!--<div class="link-group"><span class="icon icon-xxs icon-primary fa-envelope-o"></span><a-->
+    <!--class="link-white" href="mailto:shtolcman@pozitivplus.com">shtolcman@pozitivplus.com</a></div>-->
+    <!--</div>-->
+    <!--<div class="thumbnail-caption">-->
+    <!--<p class="text-header"><a href="#">Дмитрий Штольцман</a></p>-->
+    <!--<div class="divider divider-md"></div>-->
+    <!--<p class="text-caption">Финансист</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</section>-->
+
+    <!--<section class="section-50 section-md-100 bg-whisperapprox">-->
+    <!--<div class="container">-->
+    <!--<div class="row justify-content-sm-center">-->
+    <!--<div class="col-sm-10 col-lg-12">-->
+    <!--<div class="text-center">-->
+    <!--<h2>Investment Calculator</h2>-->
+    <!--<div class="tabs-custom tabs-horizontal tabs-minimal tabs-custom-variant-1" id="tabs-4">-->
+    <!--<div class="nav-tabs-wrap">-->
+    <!--<ul class="nav-tabs text-center">-->
+    <!--<li><a class="active" href="#tabs-4-1" data-toggle="tab">Contribution Amount </a>-->
+    <!--</li>-->
+    <!--<li><a href="#">Starting Amount</a></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--<div class="tab-content">-->
+    <!--<div class="tab-pane fade show active text-left" id="tabs-4-1">-->
+    <!--<div class="row row-50">-->
+    <!--<div class="col-lg-7">-->
+    <!--<div class="inset-xl-left-45 inset-xl-right-45">-->
+    <!--<div class="row row-30">-->
+    <!--<div class="col-md-6">-->
+    <!--<p><span class="text-extra-bold">Results: </span>You will need-->
+    <!--to contribute<span class="text-primary text-extra-bold"> $3,318.33 </span>at-->
+    <!--the end of each month to reach the target of $1,000,000.00.-->
+    <!--</p>-->
+    <!--</div>-->
+    <!--<div class="col-md-6 text-left">-->
+    <!--<dl class="list-terms-inline list-terms-inline-half">-->
+    <!--<dt><span class="text-extra-bold">End Balance</span></dt>-->
+    <!--<dd>$999,999.80</dd>-->
+    <!--</dl>-->
+    <!--<dl class="list-terms-inline list-terms-inline-half">-->
+    <!--<dt>Total Interest</dt>-->
+    <!--<dd>$382,700.24</dd>-->
+    <!--</dl>-->
+    <!--<dl class="list-terms-inline list-terms-inline-half">-->
+    <!--<dt>Total Principal</dt>-->
+    <!--<dd>$617,299,56</dd>-->
+    <!--</dl>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<hr class="divider-fullwidth bg-iron">-->
+    <!--<form>-->
+    <!--<div class="row row-22 align-items-md-end">-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="form-wrap form-wrap-outside">-->
+    <!--<label class="text-black form-label form-label-outside"-->
+    <!--for="fist-name">Your Target ($)</label>-->
+    <!--<input class="form-input bg-whisper-lighten"-->
+    <!--id="fist-name" type="text" name="name"-->
+    <!--placeholder="1000000">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="form-wrap form-wrap-outside">-->
+    <!--<label class="text-black form-label form-label-outside"-->
+    <!--for="duration">Duration (years)</label>-->
+    <!--<input class="form-input bg-whisper-lighten"-->
+    <!--id="duration" type="text" name="name"-->
+    <!--placeholder="15">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="form-wrap form-wrap-outside">-->
+    <!--<label class="text-black form-label form-label-outside"-->
+    <!--for="s1">Starting Principal ($)</label>-->
+    <!--<input class="form-input bg-whisper-lighten" id="s1"-->
+    <!--type="text" name="name" placeholder="20000">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="form-wrap form-wrap-outside">-->
+    <!--<label class="text-black form-label form-label-outside"-->
+    <!--for="average">Average Return (%)</label>-->
+    <!--<input class="form-input bg-whisper-lighten"-->
+    <!--id="average" type="text" name="name"-->
+    <!--placeholder="6">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="form-wrap form-wrap-outside">-->
+    <!--<label class="text-black form-label form-label-outside"-->
+    <!--for="s2">Invest at the end of each</label>-->
+    <!--&lt;!&ndash;Select 2&ndash;&gt;-->
+    <!--<select class="form-input select-filter" id="s2"-->
+    <!--data-minimum-results-for-search="Infinity"-->
+    <!--data-constraints="@Required">-->
+    <!--<option value="0">Select an option</option>-->
+    <!--<option value="2">Month</option>-->
+    <!--<option value="3">Year</option>-->
+    <!--</select>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-6"><a-->
+    <!--class="button button-icon button-icon-right button-ebony-clay big button-calculate"-->
+    <!--href="#" style="width:100%;"><span-->
+    <!--class="icon icon-xs fa-angle-right text-primary"></span>Calculate</a>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-lg-5">-->
+    <!--<h6 class="font-default text-center">Balance Accumulation Graph</h6>-->
+    <!--<div class="higchart" id="high-column2"-->
+    <!--data-graph-object="{&quot;credits&quot;:false,&quot;colors&quot;:[&quot;#4685b1&quot;,&quot;#25313d&quot;,&quot;#cfaa45&quot;],&quot;chart&quot;:{&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;className&quot;:&quot;&quot;,&quot;type&quot;:&quot;spline&quot;,&quot;zoomType&quot;:&quot;x&quot;,&quot;panning&quot;:true,&quot;panKey&quot;:&quot;shift&quot;,&quot;marginTop&quot;:10,&quot;marginRight&quot;:1},&quot;title&quot;:{&quot;text&quot;:null},&quot;xAxis&quot;:{&quot;min&quot;:0,&quot;gridLineColor&quot;:&quot;rgba(155, 155, 155, 0)&quot;,&quot;lineColor&quot;:&quot;rgba(155, 155, 155, 1)&quot;,&quot;tickColor&quot;:&quot;rgba(155, 155, 155, 1)&quot;,&quot;categories&quot;:[&quot;0yr&quot;,&quot;2.5yr&quot;,&quot;5yr&quot;,&quot;7.5yr&quot;,&quot;10yr&quot;,&quot;12.5yr&quot;,&quot;15yr&quot;]},&quot;yAxis&quot;:{&quot;lineWidth&quot;:1,&quot;tickLength&quot;:10,&quot;tickWidth&quot;:1,&quot;min&quot;:0,&quot;tickInterval&quot;:250,&quot;gridLineColor&quot;:&quot;rgba(155, 155, 155, 0)&quot;,&quot;lineColor&quot;:&quot;rgba(155, 155, 155, 1)&quot;,&quot;tickColor&quot;:&quot;rgba(155, 155, 155, 1)&quot;,&quot;title&quot;:{&quot;text&quot;:null}},&quot;plotOptions&quot;:{&quot;spline&quot;:{&quot;lineWidth&quot;:2},&quot;series&quot;:{&quot;marker&quot;:{&quot;enabled&quot;:true,&quot;symbol&quot;:&quot;circle&quot;,&quot;radius&quot;:5,&quot;lineColor&quot;:&quot;rgba(1,1,1,0)&quot;,&quot;lineWidth&quot;:2}},&quot;line&quot;:{&quot;lineWidth&quot;:2,&quot;marker&quot;:{&quot;enabled&quot;:true,&quot;symbol&quot;:&quot;circle&quot;,&quot;radius&quot;:5,&quot;states&quot;:{&quot;hover&quot;:{&quot;enabled&quot;:true}}},&quot;states&quot;:{&quot;hover&quot;:{&quot;lineWidth&quot;:2}},&quot;threshold&quot;:null}},&quot;legend&quot;:{&quot;enabled&quot;:true,&quot;floating&quot;:true,&quot;symbol&quot;:&quot;circle&quot;,&quot;align&quot;:&quot;right&quot;,&quot;verticalAlign&quot;:&quot;top&quot;,&quot;padding&quot;:10,&quot;x&quot;:0,&quot;y&quot;:0,&quot;itemStyle&quot;:{&quot;color&quot;:&quot;#9b9b9b&quot;,&quot;fontWeight&quot;:&quot;normal&quot;,&quot;fontFamily&quot;:&quot;Open Sans&quot;,&quot;fontSize&quot;:&quot;14px&quot;,&quot;hover&quot;:{&quot;enabled&quot;:false,&quot;fill&quot;:&quot;#a288d5&quot;}}},&quot;series&quot;:[{&quot;name&quot;:&quot;Balance&quot;,&quot;data&quot;:[50,220,300,540,750,1000]},{&quot;name&quot;:&quot;Principal&quot;,&quot;data&quot;:[35,150,220,400,600]},{&quot;name&quot;:&quot;Interest&quot;,&quot;data&quot;:[10,90,145,250,400]}]}"-->
+    <!--style="width: 100%; height: 400px; margin: 0 auto;"></div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</section>-->
+
+
+    <section class="section-50 section-md-90 section-md-bottom-100 bg-whisperapprox">
+        <div class="container text-center">
+            <h3>Последние новости</h3>
+            <div class="row row-40 row-offset-6 justify-content-sm-center">
+                <div class="col-sm-8 col-md-5 col-xl-3">
+                    <div class="post-boxed d-xl-inline-block">
+                        <div class="post-boxed-img-wrap"><a href="#"><img src="https://d3a1wbnh2r1l7y.cloudfront.net/home-1-268x182.jpg" alt=""
+                                                                          width="268" height="182"/></a></div>
+                        <div class="post-boxed-caption">
+                            <div class="post-boxed-title font-weight-bold">
+                                <a href="#">Приказ ФНС от 24.10.2017 № ММВ-7-11/820@ </a></div>
+                            <p>С 1 января 2018 года появились новые коды в справках о доходах В перечне появились
+                                отдельные коды для доходов в виде компенсации отпуска, выходного пособия, суммы долга,
+                                который компания списала с баланса. Коды видов дохода необходимы, когда компания
+                                оформляет справки 2-НДФЛ.</p>
+                            <div class="offset-top-5">
+                                <ul class="list-inline list-inline-dashed text-uppercase font-accent">
+                                    <li>1 ЯНВАРЯ, 2018</li>
+                                    <li><span>от <a class="text-primary" href="#">ADMIN</a></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-5 col-xl-3">
+                    <div class="post-boxed d-xl-inline-block">
+                        <div class="post-boxed-img-wrap"><a href="#"><img src="https://d3a1wbnh2r1l7y.cloudfront.net/home-2-268x182.jpg" alt=""
+                                                                          width="268" height="182"/></a></div>
+                        <div class="post-boxed-caption">
+                            <div class="post-boxed-title font-weight-bold"><a href="#">Статья 214.7, подпункт 5 пункта 1
+                                    статьи 228 НК (в ред. Федерального закона от 27.11.2017 № 354-ФЗ)</a></div>
+                            <p>
+                                С 1 января 2018 года налог с выигрышей свыше 15 тыс. руб. рассчитывает агент
+                                До поправок налоговый агент при расчете НДФЛ из выигрышей вычитал сумму, которую игрок
+                                потратил на ставки. Теперь прописали, что вычет применяют к выигрышу свыше 15 тыс. руб.
+                                Если выигрыш не больше, то игрок сам обязан посчитать налог и отдать его в бюджет. При
+                                этом вычет на сумму ставки не предусмотрен.
+                            </p>
+                            <ul class="list-inline list-inline-dashed text-uppercase font-accent">
+                                <li>1 ЯНВАРЯ, 2018</li>
+                                <li><span>от <a class="text-primary" href="#">ADMIN</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-5 col-xl-3">
+                    <div class="post-boxed d-xl-inline-block">
+                        <div class="post-boxed-img-wrap"><a href="#"><img src="https://d3a1wbnh2r1l7y.cloudfront.net/home-3-268x182.jpg" alt=""
+                                                                          width="268" height="182"/></a></div>
+                        <div class="post-boxed-caption">
+                            <div class="post-boxed-title font-weight-bold"><a href="#">Минфин поправит ПБУ 18/02</a>
+                            </div>
+                            <p>
+                                В 2018 году компании столкнутся с изменениями в учете расчетов по налогу на прибыль.
+                                Поправки в ПБУ 18/02 подготовил Минфин. Документ есть на minfin.ru > Документы > Дата
+                                публикации: 05.12.2017 и здесь. Проект меняет терминологию. В ПБУ появится понятие
+                                расхода (дохода) по налогу на прибыль по аналогии с МФСО (IAS) 12 «Налоги на прибыль».
+                                Минфин также уточняет, что временную разницу определяют как разницу между балансовой
+                                стоимостью и стоимостью для целей налога. Кроме того, ведомство дополнило перечень
+                                случаев, когда временные разницы могут возникнуть. При этом сам перечень остался
+                                открытым. Поправки технические, и большинству компаний перестраивать работу в связи с
+                                новым ПБУ не придется
+                            </p>
+                            <ul class="list-inline list-inline-dashed text-uppercase font-accent">
+                                <li>1 ЯНВАРЯ, 2018</li>
+                                <li><span>от <a class="text-primary" href="#">ADMIN</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-5 col-xl-3">
+                    <div class="post-boxed d-xl-inline-block">
+                        <div class="post-boxed-img-wrap"><a href="#"><img src="https://d3a1wbnh2r1l7y.cloudfront.net/home-4-268x182.jpg" alt=""
+                                                                          width="268" height="182"/></a></div>
+                        <div class="post-boxed-caption">
+                            <div class="post-boxed-title font-weight-bold"><a href="#">Пункт 5 статьи 230 НК (введен
+                                    Федеральным законом от 27.11.2017№ 335-ФЗ)</a></div>
+                            <p>
+                                С 1 января 2018 года выросли предельные базы по взносам
+                                В течение 2018 года лимиты выплат для начисления страховых взносов составят 1,021 млн
+                                руб. для пенсионных взносов по общим тарифам и 815 тыс. руб. для социальных взносов по
+                                материнству.
+                                С доходов в пределах лимита компания начисляет за работников взносы в ПФР по тарифу 22
+                                процента, а на сверхлимитные суммы — по тарифу 10 процентов.
+                                Если у компании есть льгота, то с доходов, которые превышают предельную базу для
+                                взносов, делать отчисления в фонды не нужно. Взносы на травматизм, медицинские взносы и
+                                пенсионные взносы по дополнительным тарифам, как и в 2017 году, надо платить со всех
+                                доходов, так как предельной базы нет.
+                                Прежние лимиты взносов в ФСС и ПФР — 755 и 876 тыс. руб. Предельные базы с 1 января
+                                увеличились, поэтому компании заплатят больше.
+                            </p>
+                            <ul class="list-inline list-inline-dashed text-uppercase font-accent">
+                                <li>JUNE 12, 2017</li>
+                                <li><span>от <a class="text-primary" href="#">ADMIN</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section parallax-container bg-black" data-parallax-img="https://d3a1wbnh2r1l7y.cloudfront.net/bg-image-6.jpg">
+        <div class="parallax-content">
+            <div class="section-66 section-md-90 context-dark" id="testimonials">
+                <div class="container">
+                    <h3 class="text-center">Отзывы</h3>
+                    <div class="owl-carousel owl-quote-bordered owl-nav-style-1" data-items="1" data-lg-items="2"
+                         data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="true" data-nav="true"
+                         data-dots="true" data-dots-each="1">
+                        <div class="inset-xl-left-60 inset-xl-right-40">
+                            <blockquote class="quote-bordered">
+                                <div class="quote-body">
+                                    <div class="quote-open">
+                                        <svg version="1.1" baseprofile="tiny" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" width="37px" height="27px"
+                                             viewbox="0 0 21 15" preserveAspectRatio="none">
+                                            <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316                    c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37                    C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316                    c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h2.734l-2.382,6.37                    C20.106,7.145,20.987,8.493,20.987,10.412z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="quote-body-inner">
+                                        <h6>Высокопрофессиональная команда</h6>
+                                        <p>
+                                            <q>Работа с ООО Позитив+ - отличный опыт. Исключительная группа
+                                                людей, которые хорошо разбираются во всех правовых вопросах,
+                                                бухгалтерском учете и соблюдении аспектов сдачи налоговой отчётности.
+                                                Настоятельно рекомендую.</q>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="quote-footer">
+                                    <div class="unit flex-row unit-spacing-sm align-items-center">
+                                        <div class="unit-left"><img class="img-circle"
+                                                                    src="https://d3a1wbnh2r1l7y.cloudfront.net/clients-testimonials-1-68x68.jpg"
+                                                                    width="68" height="68" alt=""/>
+                                        </div>
+                                        <div class="unit-body">
+                                            <cite class="text-white">Эмма Волохова</cite>
+                                            <p class="text-primary">Топ-менеджер</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <div class="inset-xl-left-60 inset-xl-right-40">
+                            <blockquote class="quote-bordered">
+                                <div class="quote-body">
+                                    <div class="quote-open">
+                                        <svg version="1.1" baseprofile="tiny" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" width="37px" height="27px"
+                                             viewbox="0 0 21 15" preserveAspectRatio="none">
+                                            <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316                    c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37                    C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316                    c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h2.734l-2.382,6.37                    C20.106,7.145,20.987,8.493,20.987,10.412z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="quote-body-inner">
+                                        <h6>Настоящие эксперты в бухгалтерии</h6>
+                                        <p>
+                                            <q>С первого момента, когда я начал иметь дело с
+                                                Позитив+ я понял, что это настоящие профи. Они задают только нужные
+                                                вопросы, и, получая ответы, в режиме нон-стоп,
+                                                обеспечивают отличный сервис!</q>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="quote-footer">
+                                    <div class="unit flex-row unit-spacing-sm align-items-center">
+                                        <div class="unit-left"><img class="img-circle"
+                                                                    src="https://d3a1wbnh2r1l7y.cloudfront.net/clients-testimonials-2-68x68.jpg"
+                                                                    width="68" height="68" alt=""/>
+                                        </div>
+                                        <div class="unit-body">
+                                            <cite class="text-white">Денис Кашин</cite>
+                                            <p class="text-primary">Госслужащий</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <div class="inset-xl-left-60 inset-xl-right-40">
+                            <blockquote class="quote-bordered">
+                                <div class="quote-body">
+                                    <div class="quote-open">
+                                        <svg version="1.1" baseprofile="tiny" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" width="37px" height="27px"
+                                             viewbox="0 0 21 15" preserveAspectRatio="none">
+                                            <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316                    c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37                    C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316                    c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h2.734l-2.382,6.37                    C20.106,7.145,20.987,8.493,20.987,10.412z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="quote-body-inner">
+                                        <h4>Бухгалтерские услуги</h4>
+                                        <p>
+                                            <q>Мне потребовалось некоторое время, чтобы найти людей, которые могли
+                                                бы выполнить то, что нужно моей компании. ООО Позитив+ - это команда
+                                                настоящих профессионалов,
+                                                которые проявили в напряженной работе, терпение и профессионализм,
+                                                они намного превзошли мои ожидания.</q>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="quote-footer">
+                                    <div class="unit flex-row unit-spacing-sm align-items-center">
+                                        <div class="unit-left"><img class="img-circle"
+                                                                    src="https://d3a1wbnh2r1l7y.cloudfront.net/clients-testimonials-9-68x68.jpg"
+                                                                    width="68" height="68" alt=""/>
+                                        </div>
+                                        <div class="unit-body">
+                                            <cite class="text-white">Сергей Примаков</cite>
+                                            <p class="text-primary">Предприниматель</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <div class="inset-xl-left-60 inset-xl-right-40">
+                            <blockquote class="quote-bordered">
+                                <div class="quote-body">
+                                    <div class="quote-open">
+                                        <svg version="1.1" baseprofile="tiny" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" width="37px" height="27px"
+                                             viewbox="0 0 21 15" preserveAspectRatio="none">
+                                            <path d="M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316                    c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37                    C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316                    c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h2.734l-2.382,6.37                    C20.106,7.145,20.987,8.493,20.987,10.412z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="quote-body-inner">
+                                        <h6>Бесплатная консультация работает!</h6>
+                                        <p>
+                                            <q>Было приятно работать с большой командой профессионалов и экспертов.
+                                                Их команда быстро изучила нас, узнала о наших
+                                                сложностях на рынке и предложила решение, которым мы все гордимся
+                                                называя его нашим собственным. Большое спасибо вам!</q>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="quote-footer">
+                                    <div class="unit flex-row unit-spacing-sm align-items-center">
+                                        <div class="unit-left"><img class="img-circle"
+                                                                    src="https://d3a1wbnh2r1l7y.cloudfront.net/clients-testimonials-11-113x113.jpg"
+                                                                    width="68" height="68" alt=""/>
+                                        </div>
+                                        <div class="unit-body">
+                                            <cite class="text-white">Юлия Милина</cite>
+                                            <p class="text-primary">Артист</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-60 section-md-top-90 section-md-bottom-100" id="contacts">
+        <div class="container">
+            <div class="row row-50 justify-content-lg-between">
+                <div class="col-lg-5 col-xl-4">
+                    <div class="inset-lg-right-15 inset-xl-right-0">
+                        <div class="row row-30 row-md-40">
+                            <div class="col-md-10 col-lg-12">
+                                <h3>Как нас найти</h3>
+                                <p>Если у вас есть вопросы, просто заполните контактную форму, и мы ответим вам в
+                                    ближайшее время. Если вы живете рядом, приходите к нам в один из наших офисов.
+
+                                </p>
+                            </div>
+                            <div class="col-md-6 col-lg-12">
+                                <h5>Центральный офис</h5>
+                                <address class="contact-info">
+                                    <p >
+                                        <a title="Посмотреть на карте" target="_blank" href="https://goo.gl/maps/gmHHBtpJ6gL2"><?=$address?></a>
+
+                                    </p>
+
+                                    <dl class="list-terms-inline">
+                                        <dt>Офис</dt> <dd> 116</dd>
+                                    </dl>
+                                    <dl class="list-terms-inline">
+
+                                        <dt>Телефон</dt>
+                                        <!--<dd><a class="link-secondary" href="callto:84956983252">+7 (495) 698-3252</a>-->
+                                        <!--</dd>-->
+                                        <!--<dd><a class="link-secondary" href="wtai://wp/mc;84956983252">+7 (495)-->
+                                        <!--698-3252</a></dd>-->
+                                        <dd><a class="link-secondary" href="wtai://wp/mc;84956983252">+7 (495)
+                                                698-3252</a></dd>
+                                    </dl>
+                                    <dl class="list-terms-inline">
+                                        <dt>E-mail</dt>
+                                        <dd><a class="link-primary" href="mailto:pozitivplus@mail.ru">pozitivplus@mail.ru</a>
+                                        </dd>
+                                    </dl>
+                                </address>
+                            </div>
+                            <div class="col-md-6 col-lg-12">
+                                <h5>Центр поддержки</h5>
+                                <span class="text-gray-05">(по вопросам работы сайта)</span>
+                                <address class="contact-info">
+                                    <!--<p class="text-uppercase">г. Москва</p>-->
+                                    <!--<dl class="list-terms-inline">-->
+                                    <!--<dt>Телефон:</dt>-->
+                                    <!--<dd><a class="link-secondary" href="callto:#"></a>-->
+                                    <!--</dd>-->
+                                    <!--</dl>-->
+                                    <dl class="list-terms-inline">
+                                        <dt>E-mail</dt>
+                                        <dd><a class="link-primary" href="mailto:support@pozitivplus.com">support@pozitivplus.com</a></dd>
+                                    </dl>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-xl-6">
+                    <h3>Связаться</h3>
+                    <form class="rd-mailform form-modern" data-form-output="form-output-global" data-form-type="contact"
+                          method="post" action="bat/mail.php">
+                        <div class="row row-30">
+                            <div class="col-md-6">
+                                <div class="form-wrap">
+                                    <input class="form-input" id="contact-name" type="text" name="name"
+                                           data-constraints="@Required">
+                                    <label class="form-label" for="contact-name">Имя</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-wrap">
+                                    <input class="form-input" id="contact-email" type="email" name="email"
+                                           data-constraints="@Email @Required">
+                                    <label class="form-label" for="contact-email">Ваш Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-wrap">
+                                    <div class="textarea-lined-wrap">
+                                        <textarea class="form-input" id="contact-message" name="message"
+                                                  data-constraints="@Required"> </textarea>
+                                        <label class="form-label" for="contact-message">Сообщение</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-30 row-offset-5">
+                            <div class="col-sm-8">
+                                <button class="button button-primary button-block" type="submit">Отправить</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button class="button button-silver-outline button-block" type="reset">Очистить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<section class="rd-google-map rd-google-map__model" data-zoom="15" data-y="55.755949" data-x="37.620729"-->
+    <!--data-styles="[{&quot;featureType&quot;:&quot;administrative.locality&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#2c2e33&quot;},{&quot;saturation&quot;:7},{&quot;lightness&quot;:19},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ffffff&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ffffff&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:100},{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#bbc0c4&quot;},{&quot;saturation&quot;:-93},{&quot;lightness&quot;:31},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#bbc0c4&quot;},{&quot;saturation&quot;:-93},{&quot;lightness&quot;:31},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#bbc0c4&quot;},{&quot;saturation&quot;:-93},{&quot;lightness&quot;:-2},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#e9ebed&quot;},{&quot;saturation&quot;:-90},{&quot;lightness&quot;:-8},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#e9ebed&quot;},{&quot;saturation&quot;:10},{&quot;lightness&quot;:69},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#e9ebed&quot;},{&quot;saturation&quot;:-78},{&quot;lightness&quot;:67},{&quot;visibility&quot;:&quot;simplified&quot;}]}]">-->
+    <!--<ul class="map_locations">-->
+    <!--<li data-x="37.620729" data-y="55.755949">-->
+    <!--<p>г. Москва,-->
+    <!--ул. Никольская д. 4/5, офисный центр "Николькое", ООО "Позитив+"-->
+    <!--CA +7 (495) 698-3252 RUSSIA-->
+    <!--</p>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</section>-->
+
+    <footer class="page-foot section section-35 bg-ebony-clay context-dark">
+        <div class="container text-center">
+            <div class="row row-15 flex-row-md-reverse justify-content-md-between align-items-md-center">
+                <div class="col-md-6 text-md-right">
+                    <div class="group-sm group-middle">
+                        <p class="font-italic text-white">Мы в Facebook:</p>
+                        <ul class="list-inline list-inline-reset">
+                            <li><a target="_blank" class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-facebook"
+                                   href="https://www.facebook.com/pozitivpluscom/"></a></li>
+
+                            <!--<li><a class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-twitter"-->
+                            <!--href="#"></a></li>-->
+                            <!--<li><a class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-google-plus"-->
+                            <!--href="#"></a></li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-left">
+                    <p class="rights text-white"><span class="label small white"></span>&copy; 2007-<span class="copyright-year"></span><span>&nbsp;&#169;&nbsp;</span><a href="http://lphp.ru">by
+                            lphp.ru</a>
+                        <!-- Yandex.Metrika informer -->
+                        <a href="https://metrika.yandex.ru/stat/?id=22546432&amp;from=informer"
+                           target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/22546432/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                                               style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="22546432" data-lang="ru" /></a>
+                        <!-- /Yandex.Metrika informer -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- coded by barber -->
 </div>
-<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
+<div class="snackbars" id="form-output-global"></div>
+<!--<script src="js/core.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ru.js"></script>
+
+<!--<script src="js/script.js"></script>-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-20071771-1"></script>-->
+<!--<script>-->
+<!--window.dataLayer = window.dataLayer || [];-->
+<!--function gtag(){dataLayer.push(arguments);}-->
+<!--gtag('js', new Date());-->
+
+<!--gtag('config', 'UA-20071771-1');-->
+<!--</script>-->
+</body>
+</html>
