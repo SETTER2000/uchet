@@ -9,6 +9,7 @@
  * > changes to that specific cocktail could be unpredictable, with unsavory
  * > consequences.
  *
+ *
  * @type {Component}
  *
  * @event close   [emitted when the closing process begins]
