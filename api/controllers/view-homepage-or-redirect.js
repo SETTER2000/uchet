@@ -24,9 +24,9 @@ module.exports = {
 
   fn: async function () {
 
-    var api_key = 'sails.custom.mailgunSecret';
-    var domain = 'www.web-webinar.ru';
-    var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+    const api_key = 'sails.custom.mailgunSecret';
+    const domain = 'web-webinar.ru';
+    const mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
 
     const data = {
       from: 'Excited User <me@samples.mailgun.org>',
@@ -36,7 +36,10 @@ module.exports = {
     };
 
     mailgun.messages().send(data, function (error, body) {
-      console.log(body);
+      if(!error){
+        console.log(error.statusCode());
+      }
+      console.log('SENDING::: ', body);
     });
 
     if (this.req.me) {

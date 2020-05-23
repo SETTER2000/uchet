@@ -35,137 +35,188 @@
         by the asset pipeline between "STYLES" and "STYLES END", or both.
         (https://sailsjs.com/docs/concepts/assets/task-automation)
     */ %>
-
+    <link rel="stylesheet" type="text/css"
+          href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7COpen+Sans:300,300italic,400,400italic,700italic,800%7CUbuntu:500">
     <% /* Auto-injected «link» tags: */ %>
     <!--STYLES-->
-    <link rel="stylesheet" href="/dependencies/bootstrap.css">
-    <link rel="stylesheet" href="/dependencies/fontawesome.css">
+    <link rel="stylesheet" href="/styles/css/bootstrap.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;">
+      <a href="httpqwertywindows.microsoft.com/en-US/internet-explorer/"><img
+              src="https://d3a1wbnh2r1l7y.cloudfront.net/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+              alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
+    </div>
+    <![endif]-->
   </head>
   <body>
-    <div id="page-wrap">
-      <header class="page-head" id="home">
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-corporate-light" data-layout="rd-navbar-fixed"
-               data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
-               data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
-               data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
-               data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
-               data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="53px" data-xl-stick-up-offset="53px"
-               data-xxl-stick-up-offset="53px" data-lg-stick-up="true" data-xl-stick-up="true"
-               data-xxl-stick-up="true">
-            <div class="bg-ebony-clay context-dark">
-              <div class="rd-navbar-inner">
-                <div class="rd-navbar-aside-wrap">
-                  <div class="rd-navbar-aside">
-                    <div class="rd-navbar-aside-toggle" data-rd-navbar-toggle=".rd-navbar-aside">
-                      <span></span></div>
-                    <div class="rd-navbar-aside-content">
-                      <ul class="rd-navbar-aside-group list-units">
-                        <li>
-                          <div class="unit flex-row unit-spacing-xs align-items-center">
-                            <div class="unit-left"><span
-                                      class="icon icon-xxs icon-primary fa-map-marker"></span></div>
-                            <div class="unit-body"><a class="link-secondary"  title="Посмотреть на карте" target="_blank" href="https://goo.gl/maps/gmHHBtpJ6gL2"><?=$address?></a></div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="unit flex-row unit-spacing-xs align-items-center">
-                            <div class="unit-left"><span
-                                      class="icon icon-xxs icon-primary fa-clock-o"></span></div>
-                            <div class="unit-body"><span class="time">Часы работы: Пон – Пятн, с 10:00 до 18:00.</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="unit flex-row unit-spacing-xs align-items-center">
-                            <div class="unit-left"><span
-                                      class="icon icon-xxs icon-primary fa-phone"></span></div>
-                            <div class="unit-body"><a class="link-secondary" href="wtai://wp/mc;84956983252">+7
-                                (495) 698-3252</a></div>
-                          </div>
-
-
-
-
-                        </li>
-                      </ul>
-                      <div class="rd-navbar-aside-group">
-                        <ul class="list-inline list-inline-reset">
-                          <li>
-                            <a target="_blank" class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-facebook"
-                               href="https://www.facebook.com/pozitivpluscom/"></a></li>
-                          <!--<li>-->
-                          <!--<a class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-twitter"-->
-                          <!--href="#"></a></li>-->
-                          <!--<li>-->
-                          <!--<a class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-google-plus"-->
-                          <!--href="#"></a></li>-->
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="rd-navbar-inner">
-              <div class="rd-navbar-group">
-                <div class="rd-navbar-panel">
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span>
-                  </button>
-                  <a class="rd-navbar-brand brand" href="/">
-                    <img src="https://d3a1wbnh2r1l7y.cloudfront.net/corporation_logo.svg" title="Позитив+" alt="Позитив+. Бухгалтерский учёт."  width="175" /></a>
-                </div>
-                <div class="rd-navbar-group-asside">
-                  <div class="rd-navbar-nav-wrap">
-                    <div class="rd-navbar-nav-inner">
-                      <ul class="rd-navbar-nav">
-                        <li class="active">
-                          <a href="#home">
-                            <span class="icon icon-xxs  fa-home"></span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#services">Услуги</a>
-                        </li>
-                        <!--<li><a href="#team">Наша команда</a></li>-->
-                        <li>
-                          <a href="#pricing">Прайс</a>
-                        </li>
-                        <li>
-                          <a href="#about">О нас</a>
-                        </li>
-                        <li><a href="#testimonials">Отзывы</a>
-                        </li>
-                        <li><a href="#contacts">Контакты</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter22546432 = new Ya.Metrika({
+            id:22546432,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+          });
+        } catch(e) { }
+      });
+      var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://mc.yandex.ru/metrika/watch.js";
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/22546432" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <div class="page">
+    <div class="page-loader page-loader-variant-1">
+      <div><a class="brand brand-md brand-inverse" href="/">
+          <img src="https://d3a1wbnh2r1l7y.cloudfront.net/corporation_logo_white.svg" alt="" width="240"/></a>
+        <div class="page-loader-body">
+          <div id="spinningSquaresG">
+            <div class="spinningSquaresG" id="spinningSquaresG_1"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_2"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_3"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_4"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_5"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_6"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_7"></div>
+            <div class="spinningSquaresG" id="spinningSquaresG_8"></div>
+          </div>
         </div>
-      </header>
+      </div>
+    </div>
+
 
 
       <!-- Alert if email has not been confirmed -->
       <% if(me&&me.emailChangeCandidate) { %>
       <div class="container-fluid">
         <div class="alert alert-secondary mt-2" role="alert">
-        Your updated email address needs verification. Until you click the link sent to <strong><%= me.emailChangeCandidate %></strong>, you'll still need to sign in as <strong><%= me.emailAddress %></strong>.
+          <%= __('Your updated email address needs verification. Until you click the link sent to') %> <strong><%= me.emailChangeCandidate %></strong>, you'll still need to sign in as <strong><%= me.emailAddress %></strong>.
         </div>
       </div>
       <% } else if(me&&me.emailStatus === 'unconfirmed') { %>
       <div class="container-fluid">
         <div class="alert alert-secondary mt-2" role="alert">
-        Your email address still needs verification. Your account access may be limited until you click the link sent to <strong><%= me.emailChangeCandidate ? me.emailChangeCandidate : me.emailAddress%></strong>.
+          <%= __('Your email address still needs verification. Your account access may be limited until you click the link sent to') %> <strong><%= me.emailChangeCandidate ? me.emailChangeCandidate : me.emailAddress%></strong>.
         </div>
       </div>
       <% } %>
+    <header class="page-head" id="home">
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-corporate-light" data-layout="rd-navbar-fixed"
+             data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
+             data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+             data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+             data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+             data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="53px" data-xl-stick-up-offset="53px"
+             data-xxl-stick-up-offset="53px" data-lg-stick-up="true" data-xl-stick-up="true"
+             data-xxl-stick-up="true">
+          <div class="bg-ebony-clay context-dark">
+            <div class="rd-navbar-inner">
+              <div class="rd-navbar-aside-wrap">
+                <div class="rd-navbar-aside">
+                  <div class="rd-navbar-aside-toggle" data-rd-navbar-toggle=".rd-navbar-aside">
+                    <span></span></div>
+                  <div class="rd-navbar-aside-content">
+                    <ul class="rd-navbar-aside-group list-units">
+                      <li>
+                        <div class="unit flex-row unit-spacing-xs align-items-center">
+                          <div class="unit-left"><span
+                                    class="icon icon-xxs icon-primary fa-map-marker"></span></div>
+                          <div class="unit-body"><a class="link-secondary"  title="Посмотреть на карте" target="_blank" href="https://goo.gl/maps/gmHHBtpJ6gL2"><?=$address?></a></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit flex-row unit-spacing-xs align-items-center">
+                          <div class="unit-left"><span
+                                    class="icon icon-xxs icon-primary fa-clock-o"></span></div>
+                          <div class="unit-body"><span class="time">Часы работы: Пон – Пятн, с 10:00 до 18:00.</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit flex-row unit-spacing-xs align-items-center">
+                          <div class="unit-left"><span
+                                    class="icon icon-xxs icon-primary fa-phone"></span></div>
+                          <div class="unit-body"><a class="link-secondary" href="tel:+74956983252">+7
+                              (495) 698-3252</a></div>
+                        </div>
 
+
+
+
+                      </li>
+                    </ul>
+                    <div class="rd-navbar-aside-group">
+                      <ul class="list-inline list-inline-reset">
+                        <li>
+                          <a target="_blank" class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-facebook"
+                             href="https://www.facebook.com/pozitivpluscom/"></a></li>
+                        <!--<li>-->
+                        <!--<a class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-twitter"-->
+                        <!--href="#"></a></li>-->
+                        <!--<li>-->
+                        <!--<a class="icon icon-round icon-pciked-bluewood icon-xxs-smallest fa fa-google-plus"-->
+                        <!--href="#"></a></li>-->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rd-navbar-inner">
+            <div class="rd-navbar-group">
+              <div class="rd-navbar-panel">
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span>
+                </button>
+                <a class="rd-navbar-brand brand" href="/">
+                  <img src="https://d3a1wbnh2r1l7y.cloudfront.net/corporation_logo.svg" title="Позитив+" alt="Позитив+. Бухгалтерский учёт."  width="175" /></a>
+              </div>
+              <div class="rd-navbar-group-asside">
+                <div class="rd-navbar-nav-wrap">
+                  <div class="rd-navbar-nav-inner">
+                    <ul class="rd-navbar-nav">
+                      <li class="active">
+                        <a href="#home">
+                          <span class="icon icon-xxs  fa-home"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#services">Услуги</a>
+                      </li>
+                      <!--<li><a href="#team">Наша команда</a></li>-->
+                      <li>
+                        <a href="#pricing">Прайс</a>
+                      </li>
+                      <li>
+                        <a href="#about">О нас</a>
+                      </li>
+                      <li><a href="#testimonials">Отзывы</a>
+                      </li>
+                      <li><a href="#contacts">Контакты</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
       <%- body %>
 
       <footer id="page-footer" class="navbar navbar-light justify-content-between flex-row-reverse">
@@ -180,7 +231,7 @@
         <small class="copy">Copyright &copy; 2019 <a target="_blank" href="NEW_APP_COMPANY_ABOUT_HREF">Pozitiv+</a>. <br class="xs-only"/>All rights reserved.</small>
       </footer>
     </div>
-
+  <div class="snackbars" id="form-output-global"></div>
 
     <% /*
       Client-side JavaScript
@@ -309,5 +360,13 @@
     })();//†
     </script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20071771-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-20071771-1');
+    </script>
   </body>
 </html>
