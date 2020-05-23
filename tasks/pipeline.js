@@ -68,9 +68,12 @@ var jsFilesToInject = [
   // (e.g. Lodash, Vue.js, jQuery, Bootstrap, Ember, Angular, etc.)
   // > Be sure to list dependencies that depend on each other in the right order!
   'dependencies/lodash.js',
-  'dependencies/jquery.min.js',
+  'dependencies/jquery.min.js', // это место для jquery
   'dependencies/vue.js',
   'dependencies/vue-router.js',
+  'dependencies/moment.js',
+  'dependencies/moment/**/*.js',
+  'dependencies/core.min.js', // это место для jquery
   'dependencies/**/*.js',
 
   // First amongst the app-level files, bring in cloud configuration
@@ -117,7 +120,6 @@ var templateFilesToInject = [
 ];
 
 
-
 //  ███╗   ███╗██╗███████╗ ██████╗       ███████╗███████╗████████╗██╗   ██╗██████╗
 //  ████╗ ████║██║██╔════╝██╔════╝       ██╔════╝██╔════╝╚══██╔══╝██║   ██║██╔══██╗
 //  ██╔████╔██║██║███████╗██║            ███████╗█████╗     ██║   ██║   ██║██████╔╝
@@ -135,21 +137,21 @@ var tmpPath = '.tmp/public/';
 // Prefix relative paths to source files so they point to the proper locations
 // (i.e. where the other Grunt tasks spit them out, or in some cases, where
 // they reside in the first place)
-module.exports.cssFilesToInject = cssFilesToInject.map((cssPath)=>{
+module.exports.cssFilesToInject = cssFilesToInject.map((cssPath) => {
   // If we're ignoring the file, make sure the ! is at the beginning of the path
   if (cssPath[0] === '!') {
     return require('path').join('!' + tmpPath, cssPath.substr(1));
   }
   return require('path').join(tmpPath, cssPath);
 });
-module.exports.jsFilesToInject = jsFilesToInject.map((jsPath)=>{
+module.exports.jsFilesToInject = jsFilesToInject.map((jsPath) => {
   // If we're ignoring the file, make sure the ! is at the beginning of the path
   if (jsPath[0] === '!') {
     return require('path').join('!' + tmpPath, jsPath.substr(1));
   }
   return require('path').join(tmpPath, jsPath);
 });
-module.exports.templateFilesToInject = templateFilesToInject.map((tplPath)=>{
+module.exports.templateFilesToInject = templateFilesToInject.map((tplPath) => {
   // If we're ignoring the file, make sure the ! is at the beginning of the path
   if (tplPath[0] === '!') {
     return require('path').join('!assets/', tplPath.substr(1));

@@ -35,12 +35,12 @@ module.exports = {
       text: 'Testing some Mailgun awesomness!'
     };
 
-    mailgun.messages().send(data, function (error, body) {
-      if(!error){
-        console.log(error.statusCode());
-      }
-      console.log('SENDING::: ', body);
-    });
+    // mailgun.messages().send(data, function (error, body) {
+    //   if(!error){
+    //     console.log(error.statusCode());
+    //   }
+    //   console.log('SENDING::: ', body);
+    // });
 
     if (this.req.me) {
       throw {redirect: '/welcome'};

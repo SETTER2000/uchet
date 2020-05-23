@@ -619,12 +619,12 @@ $(function () {
    * UI To Top
    * @description Enables ToTop Button
    */
-  if (isDesktop && !isNoviBuilder) {
+/*  if (isDesktop && !isNoviBuilder) {
     $().UItoTop({
       easingType: 'easeOutQuart',
       containerClass: 'ui-to-top fa fa-angle-up'
     });
-  }
+  }*/
 
   /**
    * RD Navbar
@@ -802,20 +802,20 @@ $(function () {
    * Owl carousel
    * @description Enables Owl carousel plugin
    */
-  if (plugins.owl.length) {
+/*  if (plugins.owl.length) {
     for (var i = 0; i < plugins.owl.length; i++) {
       var c = $(plugins.owl[i]);
       plugins.owl[i] = c;
 
       initOwlCarousel(c);
     }
-  }
+  }*/
 
   /**
    * initOwlCarousel
    * @description  Init owl carousel plugin
    */
-  function initOwlCarousel(c) {
+ /* function initOwlCarousel(c) {
     var aliaces = ["-", "-sm-", "-md-", "-lg-", "-xl-", "-xxl-"],
       values = [0, 576, 768, 992, 1200,  1600],
       responsive = {};
@@ -904,7 +904,7 @@ $(function () {
         }
       }()
     });
-  }
+  }*/
 
 
   /**
@@ -1305,11 +1305,11 @@ if (plugins.pageLoader.length) {
 
 
 
-
-// var anniversary2 = document.getElementById('anniversary2');
+/*
+var anniversary2 = document.getElementById('anniversary2');
 var anniversary = document.getElementById('anniversary'),
     ans=moment([2007, 1, 26]).toNow(true);
-anniversary.innerHTML = anniversary.innerHTML = ans;
+anniversary2.innerHTML = anniversary.innerHTML = ans;*/
 
 
 

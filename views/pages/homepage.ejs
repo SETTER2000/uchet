@@ -10,16 +10,19 @@
                                 <div class="col-xl-1 d-none d-xl-inline-block d-xxl-none"></div>
                                 <div class="col-md-9 col-lg-7 col-xl-6 text-md-left">
                                     <h1 class="slider-header text-ebony-clay" data-caption-animate="fadeInUp"
-                                        data-caption-delay="0s">Компания "Позитив+"
+                                        data-caption-delay="0s">Бухгалтерский учёт. "Позитив+"
                                     </h1>
+                                    <!--                                    <strong class="text-right" style="color: #25313D;"><span id="anniversary2"></span> на рынке.</strong>-->
                                     <p class="text-bigger text-regular slider-text text-ebony-clay"
                                        data-caption-animate="fadeInUp" data-caption-delay="100">
                                         Бухгалтерский учёт. Аудит. Учет в иностранных компаниях.
+
+
                                     </p>
-                                    <a class="button button-icon button-icon-right button-primary big"
+                                    <a
+                                            class="button button-icon button-icon-right button-primary big"
                                             data-caption-animate="fadeInUp" data-caption-delay="250" href="#contacts"><span
-                                                class="icon icon-xs fa-angle-right"></span>
-                                        Первая консультация бесплатная</a>
+                                                class="icon icon-xs fa-angle-right"></span>Первая консультация бесплатная</a>
                                 </div>
                             </div>
                         </div>
@@ -302,7 +305,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <ul class="list-progress">
+                 <!--   <ul class="list-progress">
                         <li>
                             <p class="animated fadeIn">Консалтинг</p>
                             <div class="progress-bar-js progress-bar-horizontal progress-bar-red-orange-1"
@@ -327,7 +330,7 @@
                                  data-stroke="4" data-easing="linear" data-counter="true" data-duration="1000"
                                  data-trail="100"></div>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
             </div>
         </div>
@@ -527,7 +530,7 @@
         <div class="parallax-content">
             <div class="section-66 section-md-90 context-dark" id="testimonials">
                 <div class="container">
-                    <h3 class="text-center">Отзывы</h3>
+                    <h3 class="text-center"><%= __('Reviews') %></h3>
                     <div class="owl-carousel owl-quote-bordered owl-nav-style-1" data-items="1" data-lg-items="2"
                          data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="true" data-nav="true"
                          data-dots="true" data-dots-each="1">
@@ -680,13 +683,13 @@
                     <div class="inset-lg-right-15 inset-xl-right-0">
                         <div class="row row-30 row-md-40">
                             <div class="col-md-10 col-lg-12">
-                                <h3>Как нас найти</h3>
+                                <h3><%= __('How to find us') %></h3>
                                 <p>Если у вас есть вопросы, просто заполните контактную форму, и мы ответим вам в
                                     ближайшее время. Если вы живете рядом, приходите к нам в один из наших офисов.
                                 </p>
                             </div>
                             <div class="col-md-6 col-lg-12">
-                                <h5>Центральный офис</h5>
+                                <h5><%= __('Central office') %></h5>
                                 <address class="contact-info">
                                     <p >
                                         <a title="Посмотреть на карте" target="_blank" href="https://goo.gl/maps/gmHHBtpJ6gL2"><?=$address?></a>
@@ -724,7 +727,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-xl-6">
-                    <h3>Связаться</h3>
+                    <h3><%= __('Contact') %></h3>
                     <form class="rd-mailform form-modern" data-form-output="form-output-global" data-form-type="contact"
                           method="post" action="bat/mail.php">
                         <div class="row row-30">
@@ -766,4 +769,4 @@
         </div>
     </section>
 </div>
-
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
