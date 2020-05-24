@@ -4,7 +4,8 @@ parasails.registerPage('homepage', {
   //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
   data: {
     heroHeightSet: false,
-    bg1:'images/Banner_Root_background.jpg'
+    address:'Fop',
+    bg1:'https://d3a1wbnh2r1l7y.cloudfront.net/pozitiv/Banner_Root_background.jpg'
   },
 
   //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
